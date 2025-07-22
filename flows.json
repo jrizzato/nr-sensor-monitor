@@ -1,0 +1,1104 @@
+[
+    {
+        "id": "e76f2c2ba9dbd219",
+        "type": "tab",
+        "label": "lógica",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dd0b69a844f05168",
+        "type": "tab",
+        "label": "ui",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0b21470defac060b",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "05f01137a09b52b1",
+        "type": "ui-base",
+        "name": "ui_template.label.myDashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "f59b02cc26b4cbe3",
+        "type": "ui-theme",
+        "name": "ui_template.themes.defaultTheme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "ea54d506a5e3d91f",
+        "type": "ui-page",
+        "name": "Sensor Monitor",
+        "ui": "05f01137a09b52b1",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "f59b02cc26b4cbe3",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "aa5c165b7bfdc92a",
+        "type": "ui-group",
+        "name": "Muestras",
+        "page": "ea54d506a5e3d91f",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "4716e68e8da1c1d0",
+        "type": "ui-group",
+        "name": "Alarmas",
+        "page": "ea54d506a5e3d91f",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "11771c2cf350c7e9",
+        "type": "ui-spacer",
+        "group": "aa5c165b7bfdc92a",
+        "name": "ui_template.label.spacer",
+        "tooltip": "",
+        "order": 8,
+        "width": 1,
+        "height": 1,
+        "className": ""
+    },
+    {
+        "id": "a2b7de5559a177e2",
+        "type": "inject",
+        "z": "e76f2c2ba9dbd219",
+        "name": "",
+        "props": [
+            {
+                "p": "mi_horario",
+                "v": "object",
+                "vt": "date"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "2",
+        "topic": "",
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "fb019874f1501614"
+            ]
+        ]
+    },
+    {
+        "id": "fb019874f1501614",
+        "type": "function",
+        "z": "e76f2c2ba9dbd219",
+        "name": "Generar valor rand",
+        "func": "// Simula un valor entre 0 y 100\nmsg.payload = Math.round(Math.random() * 100);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 140,
+        "wires": [
+            [
+                "5eec7053c2a00013",
+                "3e05fb625254c43d",
+                "3708d1aafc3960e8"
+            ]
+        ]
+    },
+    {
+        "id": "5eec7053c2a00013",
+        "type": "debug",
+        "z": "e76f2c2ba9dbd219",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "69aa5acf97906ca1",
+        "type": "function",
+        "z": "e76f2c2ba9dbd219",
+        "name": "Estadisticas",
+        "func": "// obtener valores o, en su defecto, inicializar\nlet minAnterior = global.get('min');\nif(minAnterior === undefined){\n    minAnterior = msg.payload;\n}\n\nlet maxAnterior = global.get('max');\nif(maxAnterior === undefined){\n    maxAnterior = msg.payload;\n}\n\n// obtener sumas y conteo previo\nlet sumTotal = global.get('suma') || 0;\nlet contador = global.get('cont') || 0;\n\n// actualizar suma y contador\nsumTotal += msg.payload;\ncontador += 1;\n\n// calcular nuevos valores\nconst nuevoMin = Math.min(minAnterior, msg.payload);\nconst nuevoMax = Math.max(maxAnterior, msg.payload);\nconst promedio = sumTotal / contador;\n\n// guardar en el contexto del flujo\nglobal.set('min', nuevoMin);\nglobal.set('max', nuevoMax);\nglobal.set('suma', sumTotal);\nglobal.set('cont', contador);\n\n// preparo la salida\nmsg.stats = {\n    hora: msg.mi_horario,\n    min: nuevoMin,\n    max: nuevoMax,\n    prom: promedio\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "b98c45f0dd73e44d",
+                "519009cc955e24ae",
+                "6df40dbea92727ea"
+            ]
+        ]
+    },
+    {
+        "id": "b98c45f0dd73e44d",
+        "type": "debug",
+        "z": "e76f2c2ba9dbd219",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "711e2e0a92a9f7f0",
+        "type": "file",
+        "z": "e76f2c2ba9dbd219",
+        "name": "guardar en archivo",
+        "filename": "C:\\Users\\jrizz\\.node-red\\projects\\sensor_monitor\\data\\lecturas.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1010,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "519009cc955e24ae",
+        "type": "function",
+        "z": "e76f2c2ba9dbd219",
+        "name": "fomat payload to file",
+        "func": "msg.payload =\n    \"Horario: \" + msg.stats.hora + \"\\n\" + \n    \"Mínimo: \" + msg.stats.min + \"\\n\" +\n    \"Máximo: \" + msg.stats.max + \"\\n\" +\n    \"Promedio: \" + msg.stats.prom + \"\\n\" +\n    \"-----------------------------------\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 140,
+        "wires": [
+            [
+                "711e2e0a92a9f7f0"
+            ]
+        ]
+    },
+    {
+        "id": "6df40dbea92727ea",
+        "type": "link out",
+        "z": "e76f2c2ba9dbd219",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "fc06834df4ffe1a3"
+        ],
+        "x": 695,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3e05fb625254c43d",
+        "type": "link out",
+        "z": "e76f2c2ba9dbd219",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "08517fb3a31023f7"
+        ],
+        "x": 475,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3708d1aafc3960e8",
+        "type": "change",
+        "z": "e76f2c2ba9dbd219",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "minAnterior",
+                "pt": "msg",
+                "to": "min",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "maxAnterior",
+                "pt": "msg",
+                "to": "max",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "sumTotal",
+                "pt": "msg",
+                "to": "suma",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "cont",
+                "pt": "msg",
+                "to": "cont",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 320,
+        "wires": [
+            [
+                "bf3db99cad018f94",
+                "0da2050011b3bcea"
+            ]
+        ]
+    },
+    {
+        "id": "ad6140370c366b52",
+        "type": "debug",
+        "z": "e76f2c2ba9dbd219",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "bf3db99cad018f94",
+        "type": "change",
+        "z": "e76f2c2ba9dbd219",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sumTotal",
+                "pt": "msg",
+                "to": "msg.payload + msg.sumTotal",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "cont",
+                "pt": "msg",
+                "to": "msg.cont + 1",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 320,
+        "wires": [
+            [
+                "ad6140370c366b52"
+            ]
+        ]
+    },
+    {
+        "id": "0da2050011b3bcea",
+        "type": "debug",
+        "z": "e76f2c2ba9dbd219",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fc06834df4ffe1a3",
+        "type": "link in",
+        "z": "dd0b69a844f05168",
+        "name": "link in 1",
+        "links": [
+            "6df40dbea92727ea"
+        ],
+        "x": 125,
+        "y": 180,
+        "wires": [
+            [
+                "72179e2232f78292",
+                "8d7678cda5bdaee6",
+                "60df4bc0d0977823",
+                "6665b9b2aaae24f9",
+                "0dad416cdce7e8c5",
+                "aba6c54d67d0efae",
+                "6eca9247a1796913"
+            ]
+        ]
+    },
+    {
+        "id": "72179e2232f78292",
+        "type": "ui-chart",
+        "z": "dd0b69a844f05168",
+        "group": "aa5c165b7bfdc92a",
+        "name": "muestra",
+        "label": "muestra",
+        "order": 1,
+        "chartType": "line",
+        "category": "",
+        "categoryType": "none",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "60",
+        "removeOlderUnit": "1",
+        "removeOlderPoints": "60",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 340,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9be736d8b720f1ad",
+        "type": "ui-text",
+        "z": "dd0b69a844f05168",
+        "group": "aa5c165b7bfdc92a",
+        "order": 4,
+        "width": 1,
+        "height": 0,
+        "name": "min",
+        "label": "min: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 510,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "531f0ffd94052773",
+        "type": "ui-text",
+        "z": "dd0b69a844f05168",
+        "group": "aa5c165b7bfdc92a",
+        "order": 3,
+        "width": 1,
+        "height": 0,
+        "name": "max",
+        "label": "max: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "x": 510,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7dc4e683d87834a7",
+        "type": "ui-text",
+        "z": "dd0b69a844f05168",
+        "group": "aa5c165b7bfdc92a",
+        "order": 5,
+        "width": 3,
+        "height": 0,
+        "name": "prom",
+        "label": "prom:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 510,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8d7678cda5bdaee6",
+        "type": "change",
+        "z": "dd0b69a844f05168",
+        "name": "global.min",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "min",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "9be736d8b720f1ad"
+            ]
+        ]
+    },
+    {
+        "id": "60df4bc0d0977823",
+        "type": "change",
+        "z": "dd0b69a844f05168",
+        "name": "global.max",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "max",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "531f0ffd94052773"
+            ]
+        ]
+    },
+    {
+        "id": "6665b9b2aaae24f9",
+        "type": "change",
+        "z": "dd0b69a844f05168",
+        "name": "global.prom",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "prom",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "7dc4e683d87834a7"
+            ]
+        ]
+    },
+    {
+        "id": "cfb020c4181897d1",
+        "type": "ui-text",
+        "z": "dd0b69a844f05168",
+        "group": "aa5c165b7bfdc92a",
+        "order": 6,
+        "width": 3,
+        "height": 0,
+        "name": "suma",
+        "label": "suma:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 510,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "0dad416cdce7e8c5",
+        "type": "change",
+        "z": "dd0b69a844f05168",
+        "name": "global.suma",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "suma",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "cfb020c4181897d1"
+            ]
+        ]
+    },
+    {
+        "id": "ce8814729fa0fc26",
+        "type": "ui-text",
+        "z": "dd0b69a844f05168",
+        "group": "aa5c165b7bfdc92a",
+        "order": 7,
+        "width": 3,
+        "height": 0,
+        "name": "cont",
+        "label": "cont:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "aba6c54d67d0efae",
+        "type": "change",
+        "z": "dd0b69a844f05168",
+        "name": "global.cont",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "cont",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "ce8814729fa0fc26"
+            ]
+        ]
+    },
+    {
+        "id": "6eca9247a1796913",
+        "type": "ui-text",
+        "z": "dd0b69a844f05168",
+        "group": "aa5c165b7bfdc92a",
+        "order": 2,
+        "width": 1,
+        "height": 0,
+        "name": "muestra",
+        "label": "muestra: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 340,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "540b18449bfdbf01",
+        "type": "ui-slider",
+        "z": "dd0b69a844f05168",
+        "group": "4716e68e8da1c1d0",
+        "name": "Umbral máximo",
+        "label": "Umbral máximo: ",
+        "tooltip": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": true,
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "edf2a46e20fd2fca"
+            ]
+        ]
+    },
+    {
+        "id": "03f2f139a7482d1f",
+        "type": "ui-slider",
+        "z": "dd0b69a844f05168",
+        "group": "4716e68e8da1c1d0",
+        "name": "Umbral mínimo",
+        "label": "Umbral mínimo: ",
+        "tooltip": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "thumbLabel": "true",
+        "showTicks": "always",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
+        "showTextField": true,
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "9842601dbb3d55ac"
+            ]
+        ]
+    },
+    {
+        "id": "0b778f28de2dcc97",
+        "type": "switch",
+        "z": "dd0b69a844f05168",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "UmbralMax",
+                "vt": "global"
+            },
+            {
+                "t": "lt",
+                "v": "UmbralMin",
+                "vt": "global"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 850,
+        "y": 100,
+        "wires": [
+            [
+                "d90dcbd5b3bd2a4d"
+            ],
+            [
+                "8e38acaefcf71418"
+            ],
+            [
+                "21817b819f167403"
+            ]
+        ]
+    },
+    {
+        "id": "08517fb3a31023f7",
+        "type": "link in",
+        "z": "dd0b69a844f05168",
+        "name": "link in 2",
+        "links": [
+            "3e05fb625254c43d"
+        ],
+        "x": 705,
+        "y": 100,
+        "wires": [
+            [
+                "0b778f28de2dcc97"
+            ]
+        ]
+    },
+    {
+        "id": "d90dcbd5b3bd2a4d",
+        "type": "ui-text",
+        "z": "dd0b69a844f05168",
+        "group": "4716e68e8da1c1d0",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Alerta valor alto",
+        "label": "Alerta valor alto: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1060,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8e38acaefcf71418",
+        "type": "ui-text",
+        "z": "dd0b69a844f05168",
+        "group": "4716e68e8da1c1d0",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Alerta valor bajo",
+        "label": "Alerta valor bajo: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1060,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "21817b819f167403",
+        "type": "ui-text",
+        "z": "dd0b69a844f05168",
+        "group": "4716e68e8da1c1d0",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Valores normales",
+        "label": "Valores normales: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1070,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "edf2a46e20fd2fca",
+        "type": "change",
+        "z": "dd0b69a844f05168",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "UmbralMax",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9842601dbb3d55ac",
+        "type": "change",
+        "z": "dd0b69a844f05168",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "UmbralMin",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    }
+]
