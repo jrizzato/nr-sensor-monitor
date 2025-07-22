@@ -269,7 +269,8 @@
             [
                 "5eec7053c2a00013",
                 "3e05fb625254c43d",
-                "3708d1aafc3960e8"
+                "3708d1aafc3960e8",
+                "69aa5acf97906ca1"
             ]
         ]
     },
@@ -446,7 +447,7 @@
         "type": "debug",
         "z": "e76f2c2ba9dbd219",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -497,7 +498,7 @@
         "type": "debug",
         "z": "e76f2c2ba9dbd219",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
